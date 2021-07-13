@@ -22,6 +22,17 @@ body {
   box-sizing: border-box;
   line-height: 1.6;
 }
+main {
+  display: flex;
+  justify-content: center;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(255, 255, 255, 0.85),
+      rgba(255, 255, 255, 0.85)
+    ),
+    url(../images/copa-cover.jpg);
+  background-size: cover;
+}
 
 /*--------------ANIMATION---------------*/
 @keyframes moveInBottom {
@@ -89,7 +100,7 @@ body {
   background-size: cover;
   background-position: top;
   color: #ffffff;
-  padding: 3.5rem 15rem;
+  padding: 3.5rem 14rem;
 }
 /* NAVIGATION */
 .navigation {
@@ -102,7 +113,7 @@ body {
   list-style: none;
 }
 .navigation-item {
-  margin-right: 3rem;
+  margin-right: 1rem;
 }
 .navigation-link,
 .login-btn {
@@ -111,15 +122,21 @@ body {
   text-decoration: none;
   font-size: 1.6rem;
   transition: all 0.1s;
+  border-radius: 2px;
 }
-.login-btn:hover {
-  background-color: #165ca7;
+.navigation-link {
+  padding: 1rem 1.5rem;
 }
-/* #e02c6d */
+.navigation-link:hover {
+  background-color: #10437a;
+}
+
 .login-btn {
   padding: 1rem 2.3rem;
   background-color: #10437a;
-  border-radius: 3px;
+}
+.login-btn:hover {
+  background-color: #165ca7;
 }
 .login-icon {
   margin-right: 0.6rem;
@@ -128,11 +145,10 @@ body {
 .header-content {
   display: flex;
   align-items: center;
-  margin-top: 6rem;
+  margin-top: 5rem;
 }
 .header-content--box {
   align-self: center;
-  /* background-color: lawngreen; */
 }
 .heading-primary {
   font-size: 6.4rem;
@@ -165,4 +181,37 @@ body {
   width: 55rem;
   animation: moveInLeft 1.5s ease;
   animation-fill-mode: backwards;
+}
+
+/*--------------CONTAINER---------------*/
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-gap: 3rem;
+  margin-top: 7rem;
+}
+
+/* PLAYER CARD */
+.player-card {
+  width: 33rem;
+  padding: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  border-radius: 3px;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+.player-name {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #18191f;
+  margin: 1rem 0 0.4rem;
+}
+.player-card img {
+  width: 100%;
+}
+.player-details {
+  color: #6c6c6c;
 }
