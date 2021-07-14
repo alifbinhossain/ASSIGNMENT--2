@@ -123,7 +123,7 @@ main {
   color: #ffffff;
   text-decoration: none;
   font-size: 1.6rem;
-  transition: all 0.1s;
+  transition: all 0.2s ease;
   border-radius: 2px;
 }
 .navigation-link {
@@ -201,7 +201,7 @@ main {
 /* PLAYER CARD */
 .player-card {
   width: 33rem;
-  padding: 1.5rem;
+  padding: 1.5rem 1.5rem 2.5rem;
   background-color: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(5px);
   border-radius: 3px;
@@ -331,7 +331,7 @@ main {
 
 /*--------------FOOTER---------------*/
 .footer {
-  padding: 2rem;
+  padding: 6rem 0 4rem;
   text-align: center;
 }
 .footer-logo {
@@ -447,6 +447,10 @@ main {
   .album-image {
     width: 33rem;
     height: 25rem;
+  }
+  .album-image:hover {
+    transform: scale(1);
+    z-index: 1;
   }
   .highlight {
     margin: 0;
