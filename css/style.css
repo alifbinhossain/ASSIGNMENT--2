@@ -91,7 +91,6 @@ main {
 
 /*--------------HEADER---------------*/
 .header {
-  height: 100vh;
   background-image: linear-gradient(
       to right,
       rgba(16, 67, 122, 0.9),
@@ -102,7 +101,7 @@ main {
   background-size: cover;
   background-position: top;
   color: #ffffff;
-  padding: 3.5rem 14rem;
+  padding: 3.5rem 14rem 5rem;
 }
 /* NAVIGATION */
 .navigation {
@@ -367,6 +366,97 @@ main {
 }
 
 /*--------------MEDIA QUERY---------------*/
+
+/* TABLET DEVICE */
+@media only screen and (min-width: 668px) and (max-width: 992px) {
+  .header {
+    max-width: 100%;
+    height: 100%;
+    padding: 3.5rem 5rem 6rem;
+  }
+  .navigation-item {
+    margin-right: 0;
+  }
+  .navigation-link {
+    padding: 0.6rem 1rem;
+  }
+  .header-content {
+    width: 100%;
+  }
+  .header-content--box {
+    width: 45%;
+  }
+  .heading-primary {
+    font-size: 4.8rem;
+  }
+  .header-banner {
+    width: 40rem;
+  }
+  .players {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+  }
+  .match {
+    margin-top: 2rem;
+    margin-bottom: 0;
+    padding: 4rem 4rem;
+    width: 100%;
+    height: 100%;
+  }
+  .match-box img {
+    width: 35rem;
+  }
+  .match-box p {
+    width: 95%;
+  }
+  .heading-match {
+    font-size: 4rem;
+  }
+  .gallery {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  .heading-gallery {
+    font-size: 4.8rem;
+    margin: 0 0 2rem;
+  }
+  .album {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+  .album-image {
+    display: inline-block;
+    width: 34rem;
+    height: 25rem;
+  }
+  .album-image:hover {
+    transform: scale(1);
+    z-index: 1;
+  }
+  .highlight {
+    margin: 4rem 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .heading-highlight {
+    margin-bottom: 3rem;
+    font-size: 4.8rem;
+    font-weight: 600;
+  }
+  .videos {
+    padding: 0 1rem;
+  }
+  .video-frame {
+    width: 30rem;
+    overflow: hidden;
+    padding: 0 2rem 2rem;
+  }
+  .footer {
+    padding: 4rem 0 8rem;
+  }
+}
 /* MOBILE DEVICE */
 @media only screen and (max-width: 668px) {
   .header {
