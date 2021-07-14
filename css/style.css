@@ -239,6 +239,7 @@ main {
   align-self: center;
 }
 .match-box img {
+  border-radius: 3px;
   width: 55rem;
 }
 .match-box p {
@@ -404,24 +405,29 @@ main {
     grid-template-rows: repeat(12, 1fr);
     margin-top: 4rem;
   }
+
   .match {
     flex-direction: column;
-    margin-top: 2rem;
+    margin-top: 0;
+    padding: 4rem 2rem;
+    overflow: hidden;
   }
   .match-box {
+    flex: none;
     width: 100%;
-  }
-  .match-box:not(:last-child) {
-    margin-bottom: 4rem;
+    align-self: none;
+    overflow: hidden;
   }
   .match-box img {
+    margin-top: 3rem;
     width: 33rem;
   }
   .match-box p {
+    margin-top: 1.5rem;
     width: 100%;
   }
   .heading-match {
-    font-size: 3rem;
+    font-size: 3.6rem;
   }
   .gallery {
     width: 100%;
