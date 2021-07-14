@@ -260,6 +260,7 @@ main {
   flex-direction: column;
   align-items: center;
   width: 100%;
+  margin-bottom: 4rem;
 }
 .heading-gallery {
   font-size: 4.8rem;
@@ -357,7 +358,123 @@ main {
   color: #969bab;
 }
 .copyright {
+  display: inline-block;
   font-size: 1.8rem;
   color: #000;
   font-weight: 400;
+}
+
+/*--------------MEDIA QUERY---------------*/
+/* MOBILE DEVICE */
+@media only screen and (max-width: 668px) {
+  .header {
+    width: 100%;
+    height: 65rem;
+    padding: 3rem 0;
+  }
+  .navigation {
+    justify-content: flex-end;
+    padding: 0 2rem;
+  }
+  .nav-menu {
+    display: none;
+  }
+
+  .header-content {
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+  .header-content--box {
+    width: 100%;
+    padding: 0 2rem;
+  }
+  .header-content--box:not(:last-child) {
+    margin-bottom: 5rem;
+  }
+  .heading-primary {
+    font-size: 3.6rem;
+    width: 80%;
+  }
+  .header-banner {
+    width: 33rem;
+  }
+  .players {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    margin-top: 4rem;
+  }
+  .match {
+    flex-direction: column;
+    margin-top: 2rem;
+  }
+  .match-box {
+    width: 100%;
+  }
+  .match-box:not(:last-child) {
+    margin-bottom: 4rem;
+  }
+  .match-box img {
+    width: 33rem;
+  }
+  .match-box p {
+    width: 100%;
+  }
+  .heading-match {
+    font-size: 3rem;
+  }
+  .gallery {
+    width: 100%;
+    margin-top: -4rem;
+    margin-bottom: 4rem;
+  }
+  .heading-gallery {
+    font-size: 3.6rem;
+    margin: 2rem;
+    font-weight: 600;
+  }
+  .album {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    grid-gap: 1.8rem;
+  }
+  .album-image {
+    width: 33rem;
+    height: 25rem;
+  }
+  .highlight {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .heading-highlight {
+    margin-bottom: 3rem;
+    font-size: 3.6rem;
+    font-weight: 600;
+  }
+  .videos {
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+  }
+  .video-frame {
+    overflow: hidden;
+    width: 33rem;
+    margin-bottom: 2.5rem;
+    padding: 0 2rem 2rem;
+  }
+  .video-title {
+    margin-top: 2rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+  .footer {
+    padding: 6rem 0 8rem;
+  }
+  .footer-logo {
+    width: 25rem;
+    margin-bottom: 1rem;
+  }
 }
