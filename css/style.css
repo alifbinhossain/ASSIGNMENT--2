@@ -24,13 +24,14 @@ body {
 }
 main {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   background-image: linear-gradient(
       to right bottom,
       rgba(255, 255, 255, 0.85),
       rgba(255, 255, 255, 0.85)
     ),
-    url(../images/copa-cover.jpg);
+    url(../images/header-cover/copa-cover.jpg);
   background-size: cover;
 }
 
@@ -90,12 +91,13 @@ main {
 
 /*--------------HEADER---------------*/
 .header {
+  height: 100vh;
   background-image: linear-gradient(
-      to right bottom,
-      rgba(0, 0, 0, 0.8),
-      rgba(0, 0, 0, 0.5)
+      to right,
+      rgba(16, 67, 122, 0.9),
+      rgba(0, 0, 0, 0.7)
     ),
-    url(../images/messi-cover-2.jpg);
+    url(../images/header-cover/messi-cover-3.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
@@ -128,15 +130,15 @@ main {
   padding: 1rem 1.5rem;
 }
 .navigation-link:hover {
-  background-color: #10437a;
+  background-color: #e02c6d;
 }
 
 .login-btn {
   padding: 1rem 2.3rem;
-  background-color: #10437a;
+  background-color: #e02c6d;
 }
 .login-btn:hover {
-  background-color: #165ca7;
+  background-color: hsl(338, 74%, 63%);
 }
 .login-icon {
   margin-right: 0.6rem;
@@ -148,12 +150,14 @@ main {
   margin-top: 5rem;
 }
 .header-content--box {
+  width: 50%;
   align-self: center;
 }
 .heading-primary {
   font-size: 6.4rem;
   font-style: bold;
   margin-bottom: 2.5rem;
+  width: 90%;
   transition: all 0.2s;
   animation: moveInRight 1.2s ease-out;
   animation-fill-mode: backwards;
@@ -163,19 +167,21 @@ main {
   text-decoration: none;
   font-size: 1.6rem;
   font-weight: 500;
-  background-color: #10437a;
+  background-color: #e02c6d;
   padding: 1rem 2.2rem;
   color: #ffffff;
   border-radius: 3px;
+  transition: all 0.1s;
+}
+.btn-animated {
   animation: moveInBottom 1.5s ease 1s;
   animation-fill-mode: backwards;
-  transition: all 0.1s;
 }
 .btn-primary span {
   margin-left: 0.4rem;
 }
 .btn-primary:hover {
-  background-color: #165ca7;
+  background-color: #e65b8e;
 }
 .header-banner {
   width: 55rem;
@@ -183,8 +189,8 @@ main {
   animation-fill-mode: backwards;
 }
 
-/*--------------CONTAINER---------------*/
-.container {
+/*--------------PLAYERS---------------*/
+.players {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(4, 1fr);
@@ -202,6 +208,11 @@ main {
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
   font-size: 1.6rem;
   font-weight: 400;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+}
+.player-card:hover {
+  transform: translateY(-5px);
 }
 .player-name {
   font-size: 2.8rem;
@@ -214,4 +225,103 @@ main {
 }
 .player-details {
   color: #6c6c6c;
+}
+
+/*-----------GALLERY------------*/
+.gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.heading-gallery {
+  font-size: 4.8rem;
+  margin: 3rem;
+  font-weight: 600;
+}
+.album {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 1.5rem;
+  position: relative;
+}
+.album-image {
+  display: inline-block;
+  width: 25rem;
+  height: 20rem;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 3px;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.album-image:hover {
+  transform: scale(1.2);
+  z-index: 10;
+}
+
+/*-------------HIGHLIGHTS--------------*/
+.highlight {
+  margin: 4rem 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.heading-highlight {
+  margin-bottom: 3rem;
+  font-size: 4.8rem;
+  font-weight: 600;
+}
+.videos {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-evenly;
+}
+.video-frame {
+  width: 38rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(3px);
+  border-radius: 3px;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 2.5rem 3rem;
+  margin-bottom: 5rem;
+  border-radius: 3px;
+}
+
+.video-title {
+  margin-top: 2rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+/*----------------MATCHES--------------*/
+.match {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 4rem;
+}
+.match-box {
+  flex: 1;
+  padding: 4rem 10rem;
+}
+.match-box img {
+  width: 80%;
+}
+.match-box p {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #6c6c6c;
+  margin-bottom: 2.4rem;
+}
+.heading-match {
+  font-size: 4.8rem;
+  color: #0a0826;
+  font-size: bold;
 }
